@@ -16,3 +16,44 @@ a {
     text-decoration: none;
     color: unset;
 }
+
+.products{
+    width:60%;
+    margin:0 2% 0 1%;
+    border:1px solid green;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(200px);
+    gap:0.1% 0.4%;
+   
+}
+
+.grid-item{
+    background-color: rgb(255, 221, 227);
+    border: 2px solid sienna;
+}
+
+.details{
+    width:35%;
+    margin:0 2% 0 1%;
+    border:1px solid red;
+}
+.mainbox{
+    width:100%;
+    border:2px solid rgb(117, 117, 117);
+    display: flex;
+    height: 1800px;
+}
+
+.sliderbox1{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sliderbox2{
+    width: 500px;
+    background-color: #fff;
+    padding: 20px;
+}
