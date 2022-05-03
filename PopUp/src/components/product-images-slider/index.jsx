@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Thumbs } from 'swiper'
 import { useState } from 'react'
 
-const ProductImagesSlider = props => {
+const ProductImagesSlider = (props) => {
     const [activeThumb, setActiveThumb] = useState()
 
     return <>
