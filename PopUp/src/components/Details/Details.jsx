@@ -28,27 +28,29 @@ export const Details = () => {
             </div>
            
             {/* Promotions */}
-            <div>
+            <div className='product_promotion'>
                 <button className='promotion'>PROMOTION OFFER</button><br />
-                LAST DAY to SAVE an EXTRA 20% OFF on all orders of Rs 3,499 & above. Use Code SALE20 | Get 10% OFF on orders of Rs 1,999 & above. Use Code: SALE10<a href="">Browse promotion</a> 
+               <p className='product_deal'> LAST DAY to SAVE an EXTRA 20% OFF on all orders of Rs 3,499 & above. Use Code SALE20 | Get 10% OFF on orders of Rs 1,999 & above. Use Code: SALE10 <u> Browse promotion.</u> </p>
             </div>
-            <hr className='gray_bar' />
+        
 
             {/* information */}
-            <div>
+            <div className='delivery_icons'>
                 <div>
-                   <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/cc.svg" alt="" /> Click & Collecte <br />
-                  <p> Order this product now and collect it from a store of your choice. </p> <a href="" className='orange'>Learn more</a> 
+                   <img className='icons' src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/cc.svg" alt="" /> <span className='icons_head'>Click & Collecte</span>  <br />
+                  <p className='order_details'> Order this product now and collect it from a store of your choice.  <a href="" className='orange'>Learn more</a> </p>
                 </div>
                 <div>
-                    <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/installment-black-24.svg" alt="" /> <span>Pay in installments</span><br />
-                   <p>Pay in easy installments on orders of ₹ 3,000 or more. Available for select banks.</p>  <a href="" className='orange'> Learn more</a> 
+                    <img className='icons' src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/installment-black-24.svg" alt="" /> <span className='icons_head'>Pay in installments</span><br />
+                   <p className='order_details'>Pay in easy installments on orders of ₹ 3,000 or more. Available for select banks.  <a href="" className='orange'> Learn more</a> </p> 
                 </div>
                 <div>
-                    <img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/order-black-24.svg" alt="" /><span>When will receive my order?</span><br />
+                    <img className='icons' src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/order-black-24.svg" alt="" /><span className='order_details icons_head'>When will receive my order?</span><br />
                     <input className='pincode' type="text"  placeholder='Enter your Pincode'/> <button style={{textDecoration:"none"}} className='check'>Check</button>
                 </div>
             </div>
+
+            
         </div>
     )
 }

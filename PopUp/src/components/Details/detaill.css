@@ -82,18 +82,20 @@ body{
 }
 
 .pincode{
-    width: 60%;
-    height: 35px;
+    width: 70%;
+    margin-top: 3%;
+    height: 48px;
     color: gray;
-    padding-left: 1%;
+    padding-left: 4%;
     border: 1px solid rgb(202, 202, 202);
         
 }
 
 .check{
     border: none;
-    height: 35px;
-    width:55px;
+    height: 48px;
+    margin-top: 3%;
+    width:64px;
     cursor: pointer;
     background-color: rgb(250,166,25);
     color: whitesmoke;
@@ -155,4 +157,36 @@ body{
 
 .gray_bar{
     color: rgb(255, 255, 255);
+}
+
+.product_deal{
+    font-size:14px;
+    color: rgb(66, 66, 66);
+
+}
+
+.product_promotion{
+    border-bottom: 1px solid rgb(236, 236, 236);
+   height: 150px;
+}
+
+.delivery_icons{
+   margin-top: 5%;
+   border-bottom: 1px solid rgb(240, 240, 240);
+   height: 300px;
+}
+
+.order_details{
+  font-size: 14px;
+  color: gray;
+}
+
+.icons{
+    margin: 5px 2px 0 0;
+}
+
+.icons_head{
+    color: black;
+    border: 0px solid green;
+    
 }
