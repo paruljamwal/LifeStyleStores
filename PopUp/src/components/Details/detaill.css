@@ -6,7 +6,8 @@ body{
     display: flex;
     cursor: pointer;
     justify-content: space-between;
-
+     margin: 3% 0 4% 0;
+    
   
 }
 
@@ -34,7 +35,7 @@ body{
 }
 
 .logo{
-    margin-left: 30%;
+    margin-left: 25%;
 }
 
 .proimg{
@@ -48,9 +49,8 @@ body{
 }
 
 .basket{
-    margin: 3%;
-    width: 83%;
-    height: 50px;
+    width:100%;
+    height: 52px;
     background-color: rgb(250,166,25);
     color: whitesmoke;
     border-radius: 3px;
@@ -71,11 +71,12 @@ body{
 } */
 
 .promotion{
-    margin: 1%;
-    color: tomato;
+    margin: 0.5% 0 4% 0;
+    color: rgb(227,79,76);
     border-radius: 2px;
+    background-color: rgb(242,232,232);
     border: none;
-    width: 30%;
+    width: 40%;
     height: 30px;
 
 }
@@ -135,4 +136,23 @@ body{
 .img_demo{
     margin-top: 3%;
     font-size: 15px;
+}
+
+.size_section{
+    margin-top: 5%;
+    color: gray;
+}
+
+.heart_logo{
+    margin: 5% 0 5% 0;
+    padding-bottom: 7%;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.black{
+    color: black;
+}
+
+.gray_bar{
+    color: rgb(255, 255, 255);
 }

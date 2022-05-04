@@ -13,8 +13,8 @@ export const Details = () => {
               <div className='img_demo'> Color:<b>Black</b></div> 
                <img className='proimg' src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000010444494-Pink-DustyPink-1000010444494_01-2100.jpg" alt="" />
             </div>
-            <div>
-                Size:  <span className='guide'><a>Size Guide</a></span> 
+            <div className='size_section'>
+                Size:  <span className='guide'><u>Size Guide</u></span> 
                 <div className='size'>
                     <div className='s1'>32</div>
                     <div className='s1'>34</div>
@@ -24,15 +24,15 @@ export const Details = () => {
                     <div className='s1'>42</div>
                 </div>
                 <button className='basket'>ADD TO BASKET</button><br />
-                <i class="fa-solid fa-heart"></i>Add to Favourites
+              <div className='heart_logo'><i class="fa-solid fa-heart"></i><span className='black'>Add to Favourites</span></div> 
             </div>
-            <hr />
+           
             {/* Promotions */}
             <div>
                 <button className='promotion'>PROMOTION OFFER</button><br />
-                Buy 1 at 799 or Buy 2 at 999 <a href="">Browse promotion</a> 
+                LAST DAY to SAVE an EXTRA 20% OFF on all orders of Rs 3,499 & above. Use Code SALE20 | Get 10% OFF on orders of Rs 1,999 & above. Use Code: SALE10<a href="">Browse promotion</a> 
             </div>
-            <hr />
+            <hr className='gray_bar' />
 
             {/* information */}
             <div>
