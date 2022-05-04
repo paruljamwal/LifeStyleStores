@@ -6,9 +6,11 @@ export const Details = () => {
             <div className='amount' style={{
 
             }}>
-              <span className='rs'> <span style={{fontSize:"15px" , border:"1px solid green" , paddingTop:"-10px"}}> ₹</span> 2093</span><span className='tax'>Inclusive of all taxes ₹ 2599 Save 1040(40.02%)</span> <br />
-              <a href='#'><span className='orange'>Free shipping on all orders</span></a> <span className='logo'><img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/points-16.svg" alt="" /> Earn 4 Point </span><br />
-               Color:<b>Black</b> <br />
+              <span className='red'>₹</span><span className='red price'>2093</span><span className='tax'>Inclusive of all taxes </span> <br />
+              <span  className='strike gray'>₹ 2599</span> <span className='saving'>Save 1040(40.02%)</span> <br />
+              <a href='#'><span className='orange free_shiping'>Free shipping on all orders</span></a> <span className='logo'><img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/points-16.svg" alt="" /> <span className='earning_point'>Earn 4 Point</span>  </span><br />
+              
+              <div className='img_demo'> Color:<b>Black</b></div> 
                <img className='proimg' src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000010444494-Pink-DustyPink-1000010444494_01-2100.jpg" alt="" />
             </div>
             <div>
