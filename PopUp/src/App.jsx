@@ -6,6 +6,7 @@ import 'swiper/css/thumbs'
 import ProductImagesSlider from './components/product-images-slider';
 import { productImages } from './assets'
 import { Details } from './components/Details/Details';
+import { Product } from './components/productshow/Product';
 
 function App() {
     return (
@@ -13,12 +14,13 @@ function App() {
            BIBA Women Printed A-Line Kurta
             <div className='mainbox'>
                 <div className='products'>
-                    <div class="grid-item">1</div>
+                    <Product></Product>
+                    {/* <div class="grid-item">1</div>
                     <div class="grid-item">2</div>
                     <div class="grid-item">3</div>
                     <div class="grid-item">4</div>
                     <div class="grid-item">5</div>
-                    <div class="grid-item">6</div>
+                    <div class="grid-item">6</div> */}
                 </div>
                 <div className='details'>
                     <Details></Details>
