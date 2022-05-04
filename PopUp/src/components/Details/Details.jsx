@@ -1,6 +1,16 @@
 import React from 'react'
 import './detaill.css';
 export const Details = () => {
+
+   const pin= "https://api.postalpincode.in/pincode/{PINCODE}"
+   const handelsubmit=()=>{
+      console.log("submit")
+   }
+
+   const handelpin=(e)=>{
+      console.log(e)
+   }
+
     return (
         <div>
             <div className='amount' style={{
@@ -46,11 +56,59 @@ export const Details = () => {
                 </div>
                 <div>
                     <img className='icons' src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/order-black-24.svg" alt="" /><span className='order_details icons_head'>When will receive my order?</span><br />
-                    <input className='pincode' type="text"  placeholder='Enter your Pincode'/> <button style={{textDecoration:"none"}} className='check'>Check</button>
+                    <input onChange={handelpin} value="" className='pincode' type="text"  placeholder='Enter your Pincode'/> <button onClick={handelsubmit} style={{textDecoration:"none"}} className='check'>Check</button>
                 </div>
             </div>
 
-            
+            {/* overview */}
+
+            <div className='details_overview'>
+                <p ><b> Overview</b></p>
+                   
+                <p className='overview'>
+                Make a statement with this printed A-line kurta designed with a round neck and three-quarter sleeves. Dress up for your next occasion by pairing this kurta with a piece of fine jewelry.
+                </p>
+                <div className='overview_list'>
+                    <li>Type :</li>
+                    <li>Design :</li>
+                    <li>Neckline :</li>
+                    <li>Style :</li>
+                    <li>Sleeve Length :</li>
+                    <li>Fabric :</li>
+                    <li>Fit :</li>
+                    <li>Care Instructions :</li>
+                    <li>Model Wears :</li>
+                    <li>Country of Origin :</li>
+                    <li>Manufactured By:</li>
+                    <li>For Consumer Complaints Contact :</li>
+                    <li>Net Quantity :</li>
+                    <li>Top Hemline :</li>
+                    <li>Top Length :</li>
+                    <li>Ocassion :</li>
+                    <li>Product :</li>
+                    
+                </div>
+            </div>
+
+
+          <div className='social_icons'>
+             <div>
+            <a href="https://facebook.com">  <i class="fa-brands fa-facebook"></i><span className='socil_text'>Share</span></a> 
+              
+             </div>
+             <div>
+            <a href="https://twitter.com"> <i class="fa-brands fa-twitter"></i><span className='socil_text'>Tweet</span></a>
+                
+             </div>
+             <div>
+             <a href="https://pinterest.com"><i class="fa-brands fa-pinterest-p"></i><span className='socil_text'>Pin</span></a> 
+               
+             </div>
+             <div>
+             <i class="fa-solid fa-link"></i><span className='socil_text'>Copy link</span>
+             </div>
+          </div>
+
         </div>
     )
 }

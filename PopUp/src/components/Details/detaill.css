@@ -190,3 +190,42 @@ body{
     border: 0px solid green;
     
 }
+
+.details_overview{
+    margin: 2%;
+}
+
+.overview , .overview_list{
+     font-size: 14px;
+     text-shadow: 4px 4px 4px #aaa;
+}
+
+.overview_list{
+ border-bottom: 1px solid rgb(232, 230, 230);
+ height: 400px;
+}
+
+.social_icons{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.fa-facebook{
+    color: rgb(33, 33, 255);
+}
+
+.fa-twitter{
+    color: skyblue;
+}
+
+.fa-pinterest-p{
+    color: palevioletred;
+}
+
+
+.socil_text{
+    font-size: 13px;
+    margin-left: 5px;
+    color: gray;
+}
