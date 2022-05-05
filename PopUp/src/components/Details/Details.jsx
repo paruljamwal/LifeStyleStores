@@ -1,15 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './detaill.css';
 export const Details = () => {
+//    const [pincheck,setPinCheck]=useState("")
+//    const pin= "https://api.postalpincode.in/pincode/{PINCODE}"
+  
+  
+//    console.log(pincheck);
+//   //console.log(data);
+//    const handelsubmit=(e)=>{
+//       fetch(`https://api.postalpincode.in/pincode/${e}`)
+//    }
 
-   const pin= "https://api.postalpincode.in/pincode/{PINCODE}"
-   const handelsubmit=()=>{
-      console.log("submit")
-   }
+   
+//     const handelpin=async(e)=>{
+//         const data=await fetch(`https://api.postalpincode.in/pincode/${e}`).then((response)=>response.json()).then((data)=>setPinCheck(data));
+//         console.log(data,"data")
+//     }
+   
 
-   const handelpin=(e)=>{
-      console.log(e)
-   }
+//     useEffect(()=>{
+//         handelpin()
+//     },[pincheck])
 
     return (
         <div>
@@ -56,14 +67,22 @@ export const Details = () => {
                 </div>
                 <div>
                     <img className='icons' src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/order-black-24.svg" alt="" /><span className='order_details icons_head'>When will receive my order?</span><br />
-                    <input onChange={handelpin} value="" className='pincode' type="text"  placeholder='Enter your Pincode'/> <button onClick={handelsubmit} style={{textDecoration:"none"}} className='check'>Check</button>
+                    <input 
+                    // onChange={(e)=>handelpin(e.target.value)} 
+                     className='pincode' type="number" 
+                      placeholder='Enter your Pincode'/> 
+                      <button 
+                    //   onClick={handelsubmit} 
+                      style={{textDecoration:"none"}}
+                       className='check'>Check</button>
+                       {/* <p>data.map(e=>{e.Name}{e.DeliveryStatus})</p> */}
                 </div>
             </div>
 
             {/* overview */}
 
             <div className='details_overview'>
-                <p ><b> Overview</b></p>
+                <p><b> Overview</b></p>
                    
                 <p className='overview'>
                 Make a statement with this printed A-line kurta designed with a round neck and three-quarter sleeves. Dress up for your next occasion by pairing this kurta with a piece of fine jewelry.
