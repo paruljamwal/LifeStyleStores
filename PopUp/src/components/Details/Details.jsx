@@ -1,26 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import './detaill.css';
 export const Details = () => {
-//    const [pincheck,setPinCheck]=useState("")
-//    const pin= "https://api.postalpincode.in/pincode/{PINCODE}"
-  
-  
-//    console.log(pincheck);
-//   //console.log(data);
-//    const handelsubmit=(e)=>{
-//       fetch(`https://api.postalpincode.in/pincode/${e}`)
-//    }
+
+
+
+
 
    
-//     const handelpin=async(e)=>{
-//         const data=await fetch(`https://api.postalpincode.in/pincode/${e}`).then((response)=>response.json()).then((data)=>setPinCheck(data));
-//         console.log(data,"data")
-//     }
-   
-
-//     useEffect(()=>{
-//         handelpin()
-//     },[pincheck])
+  
+// console.log(setPinCode)
+// console.log(pincode);
 
     return (
         <div>
@@ -67,15 +56,14 @@ export const Details = () => {
                 </div>
                 <div>
                     <img className='icons' src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/order-black-24.svg" alt="" /><span className='order_details icons_head'>When will receive my order?</span><br />
+
                     <input 
-                    // onChange={(e)=>handelpin(e.target.value)} 
                      className='pincode' type="number" 
                       placeholder='Enter your Pincode'/> 
                       <button 
-                    //   onClick={handelsubmit} 
                       style={{textDecoration:"none"}}
                        className='check'>Check</button>
-                       {/* <p>data.map(e=>{e.Name}{e.DeliveryStatus})</p> */}
+                      
                 </div>
             </div>
 
