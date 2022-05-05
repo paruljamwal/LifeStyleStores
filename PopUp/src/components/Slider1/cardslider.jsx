@@ -58,6 +58,8 @@ const Cardslider = (props) => {
     slider.scrollLeft= slider.scrollLeft - 300;
   };
   return (
+      <>
+   <h2 className="card_head">You may also like</h2>
     <div id="main_slider_container">
       <MdChevronLeft size={40} className="slider-icon left" />
       <div id="slider">
@@ -80,6 +82,7 @@ const Cardslider = (props) => {
         onClick={slideRight}
       />
     </div>
+        </>
   );
 };
 

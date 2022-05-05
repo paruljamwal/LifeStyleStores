@@ -7,6 +7,10 @@ position: relative;
 
 }
 
+.card_head{
+    margin: 3% 0 0 2%;
+}
+
 #slider{
     width: 100%;
     scrollbar-width: none;
@@ -53,7 +57,8 @@ position: relative;
     position: relative;
     display: flex;
     align-items: center;
- 
+    width: 97%;
+    margin: auto;
   
 
 }
@@ -81,7 +86,8 @@ position: relative;
     box-shadow: 2px 2px 2px 2px rgba(170, 170, 170, 0.12);
 }
 .slider_image:hover{
-   zoom:unset ;
+    transition: .8s;
+   transform: rotateY(360deg);
 }
 
 .slider_img_box{
