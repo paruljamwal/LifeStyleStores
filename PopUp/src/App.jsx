@@ -12,12 +12,41 @@ import Sliderr from "./components/YouKnow/know";
 import Cardslider from "./components/Slider1/cardslider";
 import { Reviews } from "./components/Reviews/Reviews";
 import { Slider2 } from "./components/slider2/slider2";
-
+import {Routes,Route} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
 
 function App() {
+
+    //const data=`https://lifestyle-back.herokuapp.com/products`
+
+var [product,setProduct]=useState({});
+
+useEffect(()=>{
+  getData()
+},[]);
+
+
+
+const {id}=useParams()
+
+const getData=()=>{
+  fetch(`https://lifestyle-back.herokuapp.com/products/62738194d74f0aa8ad76689d`)
+  .then((response)=>response.json())
+  .then((pro)=>setProduct(pro))
+  
+}
+
+useEffect(()=>{
+  getData()
+},[]);
   return (
+
     <div>
-      BIBA Women Printed A-Line Kurta
+      {/* <Routes>
+        <Route exact path="/catagories/:id" element={<Product></Product>}></Route>
+      </Routes> */}
+     <i>{product.productName}</i>
       <div className="mainbox">
         <div className="products">
           <Product></Product>

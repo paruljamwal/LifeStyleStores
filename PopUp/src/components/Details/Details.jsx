@@ -1,42 +1,64 @@
 import React, { useEffect, useState } from 'react';
 import './detaill.css';
-export const Details = () => {
+import { useParams } from 'react-router-dom';
 
+export const Details = () => {
+ 
+    //const data=`https://lifestyle-back.herokuapp.com/products`
+
+var [product,setProduct]=useState({});
+
+useEffect(()=>{
+  getData()
+},[]);
+
+
+
+const {id}=useParams()
+
+const getData=()=>{
+  fetch(`https://lifestyle-back.herokuapp.com/products/62738194d74f0aa8ad76689d`)
+  .then((response)=>response.json())
+  .then((pro)=>setProduct(pro))
+  
+}
+
+useEffect(()=>{
+  getData()
+},[]);
+  
 
     const [randomno, setRandom] = useState("")
-
-     const handelrandom=()=>{
+    const handelrandom=()=>{
          setRandom(Math.floor(Math.random()*9)+1);
      }
 
 
-    // console.log(setPinCode)
-    // console.log(pincode);
 
     return (
         <div>
             <div className='amount' style={{
 
             }}>
-                <span className='red'>₹</span><span className='red price'>2093</span><span className='tax'>Inclusive of all taxes </span> <br />
-                <span className='strike gray'>₹ 2599</span> <span className='saving'>Save 1040(40.02%)</span> <br />
+                <span className='red'>₹</span><span className='red price'>{product.price}</span><span className='tax'>Inclusive of all taxes </span> <br />
+                <span className='strike gray'>₹{product.price}</span> <span className='saving'>Save 1040(40.02%)</span> <br />
                 <a href='#'><span className='orange free_shiping'>Free shipping on all orders</span></a> <span className='logo'><img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/points-16.svg" alt="" /> <span className='earning_point'>Earn 4 Point</span>  </span><br />
 
-                <div className='img_demo'> Color:<b>Black</b></div>
-                <img className='proimg' src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000010444494-Pink-DustyPink-1000010444494_01-2100.jpg" alt="" />
+                <div className='img_demo'> Color:<b>{product.color}</b></div>
+                <img className='proimg' src={product.image1} alt="" />
             </div>
             <div className='size_section'>
                 Size:  <span className='guide'><u>Size Guide</u></span>
                 <div className='size'>
-                    <div className='s1'>32</div>
-                    <div className='s1'>34</div>
-                    <div className='s1'>36</div>
-                    <div className='s1'>38</div>
-                    <div className='s1'>40</div>
-                    <div className='s1'>42</div>
+                    <div className='s1 sizebox'><button className='s2 line grey'>42</button></div>
+                    <div className='s1'><button className='s2'>23</button></div>
+                    <div className='s1 sizebox'><button className='s2 line grey'>32</button></div>
+                    <div className='s1'><button className='s2'>22</button></div>
+                    <div className='s1'><button className='s2'>30</button></div>
+                    <div className='s1 sizebox'><button className='s2 line grey'>34</button></div>
                 </div>
-                <button className='basket'>ADD TO BASKET</button><br />
-                <div className='heart_logo'><i class="fa-solid fa-heart"></i><span className='black'>Add to Favourites</span></div>
+                <button  className='basket'>ADD TO BASKET</button><br />
+                <div className='heart_logo'><button  className='like'><i class="fa-solid fa-heart fa-2x"></i></button><span className='black'>Add to Favourites</span></div>
             </div>
 
             {/* Promotions */}
@@ -79,23 +101,23 @@ export const Details = () => {
                     Make a statement with this printed A-line kurta designed with a round neck and three-quarter sleeves. Dress up for your next occasion by pairing this kurta with a piece of fine jewelry.
                 </p>
                 <div className='overview_list'>
-                    <li>Type :</li>
-                    <li>Design :</li>
-                    <li>Neckline :</li>
-                    <li>Style :</li>
-                    <li>Sleeve Length :</li>
-                    <li>Fabric :</li>
-                    <li>Fit :</li>
-                    <li>Care Instructions :</li>
-                    <li>Model Wears :</li>
-                    <li>Country of Origin :</li>
-                    <li>Manufactured By:</li>
-                    <li>For Consumer Complaints Contact :</li>
-                    <li>Net Quantity :</li>
-                    <li>Top Hemline :</li>
-                    <li>Top Length :</li>
-                    <li>Ocassion :</li>
-                    <li>Product :</li>
+                    <li>Type :{product.productType}</li>
+                    <li>Design :{product.style}</li>
+                    <li>Neckline :Rounded</li>
+                    <li>Style :{product.style}</li>
+                    <li>Sleeve Length :Medium</li>
+                    <li>Fabric :{product.fabric} </li>
+                    <li>Fit : All Types</li>
+                    <li>Care Instructions :Don't wash with hot water</li>
+                    <li>Model Wears :{product.brand}</li>
+                    <li>Country of Origin :India</li>
+                    <li>Manufactured By: LifeStyle</li>
+                    <li>For Consumer Complaints Contact :Managerial, lifeStyle Pvt. ltd</li>
+                    <li>Net Quantity :1</li>
+                    <li>Top Helpline :9865645342</li>
+                    <li>Top Length :{product.size+"   "}</li>
+                    <li>Ocassion :{product.style}</li>
+                    <li>Product :{product.productType}</li>
 
                 </div>
             </div>
