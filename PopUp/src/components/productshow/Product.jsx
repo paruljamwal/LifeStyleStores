@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Products.css'
 import { useParams } from 'react-router-dom';
-
+// import {ProductImagesSlider } from 'product-images-slider'
 export const Product = () => {
 var [product,setProduct]=useState({});
 
@@ -24,7 +24,14 @@ useEffect(()=>{
   getData()
 },[]);
 
-console.log("PRODUCT",product)
+//console.log("PRODUCT",product)
+const showpro=()=>{
+  // <ProductImagesSlider style={{
+  //   display:"block"
+  // }}></ProductImagesSlider> 
+console.log("helfsdfds")
+}
+
 //   async function catagories(){
 //     try{
 //      const res=await fetch(`https://lifestyle-back.herokuapp.com/products`)
@@ -51,12 +58,12 @@ console.log("PRODUCT",product)
     return (
       <>
             
-            <div class="grid-item"><img className='single' src={product.image1} alt="" /> </div>
-            <div class="grid-item"><img className='single' src={product.image2} alt="" /> </div>
-            <div class="grid-item"><img className='single' src={product.image3} alt="" /></div>
-            <div class="grid-item"><img className='single' src={product.image4} alt="" /></div>
-            <div class="grid-item"><img className='single' src={product.image5} alt="" /></div>
-            <div class="grid-item"><img className='single' src={product.image6} alt="" /></div>
+            <div class="grid-item"><img onClick={showpro} className='single' src={product.image1} alt="" /> </div>
+            <div class="grid-item"><img onClick={showpro} className='single' src={product.image2} alt="" /> </div>
+            <div class="grid-item"><img onClick={showpro} className='single' src={product.image3} alt="" /></div>
+            <div class="grid-item"><img onClick={showpro} className='single' src={product.image4} alt="" /></div>
+            <div class="grid-item"><img onClick={showpro} className='single' src={product.image5} alt="" /></div>
+            <div class="grid-item"><img onClick={showpro} className='single' src={product.image6} alt="" /></div>
            
             </>
     )

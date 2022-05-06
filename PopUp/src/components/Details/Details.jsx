@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './detaill.css';
 import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem , delItem} from '../../Redux/actions/index'
 
 export const Details = () => {
- 
+ const store=useSelector((store)=>store.addItem)
     //const data=`https://lifestyle-back.herokuapp.com/products`
 
 var [product,setProduct]=useState({});
-
+const [cartBtn,setCartBtn]=useState("ADD TO BASKET")
 useEffect(()=>{
   getData()
 },[]);
@@ -33,13 +35,26 @@ useEffect(()=>{
          setRandom(Math.floor(Math.random()*9)+1);
      }
 
+     //we need to store usedispatch in a variable
+    const dispatch=useDispatch();
 
+const handelCart=(product)=>{
+  if(cartBtn==="ADD TO BASKET"){
+      dispatch(addItem(product))
+      setCartBtn("REMOVE FROM CART")
+  }
+  else{
+      dispatch(delItem(product));
+      setCartBtn("ADD TO BASKET")
+  }
+}
+
+console.log("Length",product.length)
 
     return (
         <div>
-            <div className='amount' style={{
-
-            }}>
+            <div className='amount' >
+                count({product.length})
                 <span className='red'>₹</span><span className='red price'>{product.price}</span><span className='tax'>Inclusive of all taxes </span> <br />
                 <span className='strike gray'>₹{product.price}</span> <span className='saving'>Save 1040(40.02%)</span> <br />
                 <a href='#'><span className='orange free_shiping'>Free shipping on all orders</span></a> <span className='logo'><img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/points-16.svg" alt="" /> <span className='earning_point'>Earn 4 Point</span>  </span><br />
@@ -52,12 +67,12 @@ useEffect(()=>{
                 <div className='size'>
                     <div className='s1 sizebox'><button className='s2 line grey'>42</button></div>
                     <div className='s1'><button className='s2'>23</button></div>
-                    <div className='s1 sizebox'><button className='s2 line grey'>32</button></div>
+                    <div className='s1 sizebox'><button  className='s2 line grey'>32</button></div>
                     <div className='s1'><button className='s2'>22</button></div>
                     <div className='s1'><button className='s2'>30</button></div>
                     <div className='s1 sizebox'><button className='s2 line grey'>34</button></div>
                 </div>
-                <button  className='basket'>ADD TO BASKET</button><br />
+                <button onClick={()=>handelCart(product)}  className='basket'>{cartBtn}</button><br />
                 <div className='heart_logo'><button  className='like'><i class="fa-solid fa-heart fa-2x"></i></button><span className='black'>Add to Favourites</span></div>
             </div>
 

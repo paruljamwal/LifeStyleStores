@@ -49,14 +49,18 @@ a {
 .sliderbox1{
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: -1500px;
+    display: none;
+    // align-items: center;
+    // justify-content: center;
+    margin-left: 6%;
 }
 
 .sliderbox2{
     width: 500px;
     background-color: #fff;
     padding: 20px;
+    margin-left: 6%;
 }
 
 // .youknow_pro{
@@ -65,5 +69,7 @@ a {
 // }
 
 .slider3{
-    margin-top: 5%;
+    margin-top: 1%;
+  position: static;
+    
 }
