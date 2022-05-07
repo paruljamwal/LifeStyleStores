@@ -7,8 +7,6 @@ import { useParams } from 'react-router-dom';
 
 const ProductImagesSlider = (props) => {
     const [activeThumb, setActiveThumb] = useState()
-
- 
     var [product,setProduct]=useState({});
     
     useEffect(()=>{

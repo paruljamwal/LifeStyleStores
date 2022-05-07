@@ -42,11 +42,11 @@ useEffect(()=>{
 },[]);
   return (
 
-    <div>
+    <div className="container">
       {/* <Routes>
         <Route exact path="/catagories/:id" element={<Product></Product>}></Route>
       </Routes> */}
-     <i>{product.productName}</i>
+     <i className="heading">{product.productName}</i>
       <div className="mainbox">
         <div className="products">
           <Product></Product>
