@@ -9,6 +9,7 @@ export const Details = () => {
     const data=`https://lifestyle-back.herokuapp.com/products`
 
 var [product,setProduct]=useState({});
+const navigate=useNavigate()
 const [cartBtn,setCartBtn]=useState("ADD TO BASKET")
 // var [len,setLen]=useState(store)
 useEffect(()=>{
@@ -20,15 +21,13 @@ useEffect(()=>{
 const {id}=useParams()
 
 const getData=()=>{
-  fetch(`https://lifestyle-back.herokuapp.com/products/62738194d74f0aa8ad76689d`)
+  fetch(`https://lifestyle-back.herokuapp.com/products/${id}`)
   .then((response)=>response.json())
   .then((pro)=>setProduct(pro))
 //    setLen(data.length)
 }
 
-useEffect(()=>{
-  getData()
-},[]);
+
   
 
     const [randomno, setRandom] = useState("")
@@ -38,18 +37,19 @@ useEffect(()=>{
 
      //we need to store usedispatch in a variable
     const dispatch=useDispatch();
-
+console.log(product)
 const handelCart=(product)=>{
   if(cartBtn==="ADD TO BASKET"){
       dispatch(addItem(product))
       setCartBtn("REMOVE FROM CART")
     //   setLen(data.length)
+    navigate(`/cart/${id}`)
     }
-    alert( `${product._id}`)
-    if(product.length===undefined){
-        product.length=1;
-        alert(`${product.length}`)
-     }
+    // alert( `${product._id}`)
+    // if(product.length===undefined){
+    //     product.length=1;
+    //     alert(`${product.length}`)
+    //  }
   else{
       dispatch(delItem(product));
       setCartBtn("ADD TO BASKET")

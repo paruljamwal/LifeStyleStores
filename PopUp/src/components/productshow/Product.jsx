@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './Products.css'
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {Details} from '../Details/Details'
 import {Slider2} from '../slider2/slider2'
 import { Reviews } from '../Reviews/Reviews';
-//  import { productImages } from '../../assets';
- import {Cardslider}  from '../Slider1/cardslider';
+import {Cardslider}  from '../Slider1/cardslider';
+
 
 export const Product = () => {
 var [product,setProduct]=useState({});
-
+const navigate=useNavigate()
 useEffect(()=>{
   getData()
 },[]);
@@ -33,7 +33,7 @@ useEffect(()=>{
     return (
        <>
             
-            <i className="heading">{product.productName}</i>
+      <i className="heading">{product.productName}</i>
       
       <div className="mainbox">
     
