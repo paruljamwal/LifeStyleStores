@@ -1,0 +1,28 @@
+.imagelife{
+    width:100px;
+    height: 65px;
+    margin-left: -360px;
+}
+.upper{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width:82%;
+    height: 70px;
+    margin: auto;
+    margin-top: -35px
+}
+.search{
+    margin-top: 15px;
+  
+    width: 250px;
+    height:40px;
+    background: rgb(236,237,235);
+    margin-right: 70px;
+}
+.bs{
+    margin-top: 20px;
+
+}
+.bsbag{
+    margin-top: 20px;
+    margin-right:30px ;
+}
