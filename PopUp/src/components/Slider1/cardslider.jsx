@@ -1,7 +1,7 @@
 import React from "react";
 import "./cardslider.css";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-const Cardslider = (props) => {
+export const Cardslider = (props) => {
   const slides = [
     {
       url: "https://lmsin.net/cdn-cgi/image/h=345,w=345,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000010444494-Pink-DustyPink-1000010444494_01-2100.jpg",
@@ -86,4 +86,4 @@ const Cardslider = (props) => {
   );
 };
 
-export default Cardslider;
+

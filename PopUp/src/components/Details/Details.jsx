@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './detaill.css';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addItem , delItem} from '../../Redux/actions/index'
+import { addItem , delItem} from "../Redux/actions/index"
 import { useNavigate } from 'react-router-dom';
 export const Details = () => {
  const store=useSelector((store)=>store.addItem)
-    //const data=`https://lifestyle-back.herokuapp.com/products`
+    const data=`https://lifestyle-back.herokuapp.com/products`
 
 var [product,setProduct]=useState({});
 const [cartBtn,setCartBtn]=useState("ADD TO BASKET")
@@ -60,14 +60,14 @@ const handelCart=(product)=>{
 //  alert(index)
 // }
 // const navigate=useNavigate()
-function Addtocart(){
-   alert( `${product._id}`)
-   if(product.length===undefined){
-       product.length=1;
-       alert(`${product.length}`)
-    }
-    alert(`${product.length}`)
-}
+// function Addtocart(){
+//    alert( `${product._id}`)
+//    if(product.length===undefined){
+//        product.length=1;
+//        alert(`${product.length}`)
+//     }
+//     alert(`${product.length}`)
+// }
 
 
 // console.log("Length",product.length)

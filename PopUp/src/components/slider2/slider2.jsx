@@ -111,4 +111,4 @@ export const Slider2 = (props) => {
   );
 };
 
-export default Slider2;
+
