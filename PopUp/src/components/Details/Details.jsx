@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import './detaill.css';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addItem , delItem} from '../../Redux/actions/index'
-
+import { useNavigate } from 'react-router-dom';
 export const Details = () => {
  const store=useSelector((store)=>store.addItem)
     //const data=`https://lifestyle-back.herokuapp.com/products`
 
 var [product,setProduct]=useState({});
 const [cartBtn,setCartBtn]=useState("ADD TO BASKET")
+// var [len,setLen]=useState(store)
 useEffect(()=>{
   getData()
 },[]);
@@ -22,7 +23,7 @@ const getData=()=>{
   fetch(`https://lifestyle-back.herokuapp.com/products/62738194d74f0aa8ad76689d`)
   .then((response)=>response.json())
   .then((pro)=>setProduct(pro))
-  
+//    setLen(data.length)
 }
 
 useEffect(()=>{
@@ -42,25 +43,46 @@ const handelCart=(product)=>{
   if(cartBtn==="ADD TO BASKET"){
       dispatch(addItem(product))
       setCartBtn("REMOVE FROM CART")
-  }
+    //   setLen(data.length)
+    }
+    alert( `${product._id}`)
+    if(product.length===undefined){
+        product.length=1;
+        alert(`${product.length}`)
+     }
   else{
       dispatch(delItem(product));
       setCartBtn("ADD TO BASKET")
   }
 }
 
-console.log("Length",product.length)
+// const handelPic=index=>{
+//  alert(index)
+// }
+// const navigate=useNavigate()
+function Addtocart(){
+   alert( `${product._id}`)
+   if(product.length===undefined){
+       product.length=1;
+       alert(`${product.length}`)
+    }
+    alert(`${product.length}`)
+}
+
+
+// console.log("Length",product.length)
 
     return (
         <div>
             <div className='amount' >
-                count({product.length})
-                <span className='red'>₹</span><span className='red price'>{product.price}</span><span className='tax'>Inclusive of all taxes </span> <br />
+                {/* count({product.length}) */}
+                <span className='red'> ₹</span><span className='red price'>{product.price}</span><span className='tax'>Inclusive of all taxes </span> <br />
                 <span className='strike gray'>₹{product.price}</span> <span className='saving'>Save 1040(40.02%)</span> <br />
-                <a href='#'><span className='orange free_shiping'>Free shipping on all orders</span></a> <span className='logo'><img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/points-16.svg" alt="" /> <span className='earning_point'>Earn 4 Point</span>  </span><br />
+                <u><span className='orange free_shiping'>Free shipping on all orders</span></u> <span className='logo'><img src="https://i1.lmsin.net/website_images/static-pages/brand_exp/brand2images/icons/points-16.svg" alt="" /> <span className='earning_point'>Earn 4 Point</span>  </span><br />
 
-                <div className='img_demo'> Color:<b>{product.color}</b></div>
-                <img className='proimg' src={product.image1} alt="" />
+                <div className='img_demo'> Color:<b>{product.color}
+                </b></div>
+                <img className='proimg' src={product.image4} alt="" />
             </div>
             <div className='size_section'>
                 Size:  <span className='guide'><u>Size Guide</u></span>
@@ -72,7 +94,10 @@ console.log("Length",product.length)
                     <div className='s1'><button className='s2'>30</button></div>
                     <div className='s1 sizebox'><button className='s2 line grey'>34</button></div>
                 </div>
-                <button onClick={()=>handelCart(product)}  className='basket'>{cartBtn}</button><br />
+             {/* <Link to={"/cartPage"}>  */}
+              <button onClick={()=>handelCart(product)}  className='basket'>{cartBtn}</button>
+              {/* </Link> */}
+               <br />
                 <div className='heart_logo'><button  className='like'><i class="fa-solid fa-heart fa-2x"></i></button><span className='black'>Add to Favourites</span></div>
             </div>
 

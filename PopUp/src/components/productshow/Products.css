@@ -16,11 +16,13 @@
 } */
 
 .single{
-    cursor: pointer;
+    cursor:zoom-out;
     width: 100%;
-    /* transition: all 0.5s ease; */
+    transition: transform 2s, filter 0.1s ease-in-out;
+    /* transform-origin: center center; */
 }
 
-/* .single:hover{
-    transform:scale(1.1);
-} */
+.single:hover{
+    transform: scale(1.1);
+}
+
