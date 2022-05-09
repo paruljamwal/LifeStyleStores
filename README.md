@@ -23,7 +23,7 @@ Lifestyle is India’s leading fashion destination for the latest trends. Part o
 | Anusha | Home Page with Sliders |
 | Satendra | Signup, Login Page And Products Page |
 | Parul Jamwal | Product's Detailed Page |
-| Rutuja | Product Cart Page using Redux |
+| Rutuja Patil | Product Cart Page using Redux |
 | Atul | Product Backend And Payment Page |
 
 ## Features
