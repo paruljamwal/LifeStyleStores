@@ -34,7 +34,7 @@ Lifestyle is India’s leading fashion destination for the latest trends. Part o
 | 2 | Products Page with Filter and Sort Functionalities |
 | 3 | Dynamic add to cart feature |
 | 4 | Dynamic cart page using Redux |
-| 5 | Dummy payment for UPI-Paytm |
+| 5 | Dummy payment using UPI-Paytm |
 
 **Steps for site functionality**
   --
