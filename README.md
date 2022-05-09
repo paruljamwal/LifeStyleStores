@@ -24,7 +24,7 @@ Lifestyle is India’s leading fashion destination for the latest trends. Part o
 | Satendra | Signup, Login Page And Products Page |
 | Parul Jamwal | Product's Detailed Page |
 | Rutuja Patil | Product Cart Page using Redux |
-| Atul | Product Backend And Payment Page |
+| Atul Kumar| Product Backend And Payment Page |
 
 ## Features
 
