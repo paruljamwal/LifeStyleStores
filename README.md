@@ -48,6 +48,7 @@ Lifestyle is India’s leading fashion destination for the latest trends. Part o
 
   So it was a great experience to us while building this task we have learnt so many new concepts and how to apply tech-tools whatever we have learnt in our current unit. The project covers basic front end designs using React up to a certain level and showcasing basic functionality like signup, signin, product viewing, adding it to cart then finally placing order by filling address details and making successful payment. I greatly thankful to my instructor *Prabhanjan Padhye* and also instructor associate *Rounak Mojumder* for guiding us which helpled me to feel confident and work upon the project and to complete within the specified time period.
   
+  Blog link:https://medium.com/@paruljamwal2000/lifestylestore-s-8ea02f601e47
   
   **Sample Page Images**
   ---
