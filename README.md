@@ -8,9 +8,13 @@ Lifestyle is India’s leading fashion destination for the latest trends. Part o
 ##  Tech-stack used
   
    ```
-   Frontend : HTML, CSS, Javascript
+   Frontend : React JS
    
-   Backend   : Local-storage, Advanced Javascript
+   Backend   : Node Js
+   
+   State Management : Redux
+   
+   DataBase   : MongoDB
    ```
  ## Team members and contribution
 
