@@ -16,6 +16,10 @@ Lifestyle is India’s leading fashion destination for the latest trends. Part o
    
    DataBase   : MongoDB
    ```
+   
+ ## Backend Repo:
+  🔗 https://github.com/paruljamwal/LifeStyleStoreBackend
+ 
  ## Team members and contribution
 
  | Team Member            | Contribution                                                              |
